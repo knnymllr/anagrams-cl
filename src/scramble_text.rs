@@ -3,7 +3,10 @@ use rand::{rng};
 
 pub fn scramble_text(input: &str) -> String {
     let mut rng = rng();
-    let mut letters: Vec<char> = input.chars().filter(|c| c.is_ascii_alphabetic()).collect();
+    let mut letters: Vec<char> = input
+        .chars()
+        .filter(|c| c.is_ascii_alphabetic())
+        .collect();
 
     letters.shuffle(&mut rng);
 
